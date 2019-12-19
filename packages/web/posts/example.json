@@ -1,1 +1,5 @@
-{ "title": "BAMB!", "headline": "Ok partner lets rock" }
+{
+  "title": "BAMB!",
+  "headline": "Ok partner lets rock this house",
+  "markdown": "If we had Markdown rendering this would be _italic_"
+}
