@@ -26,7 +26,7 @@ export default function ExamplePage(props) {
       return cms.api.git
         .writeToDisk({
           fileRelativePath: props.fileRelativePath,
-          content: JSON.stringify({ title: data.title }),
+          content: JSON.stringify({ title: data.title, headline: data.headline }),
         })
         .then(() => {
           return cms.api.git.commit({
