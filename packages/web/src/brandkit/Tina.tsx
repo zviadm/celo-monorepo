@@ -16,17 +16,27 @@ export default function ExamplePage(props) {
     id: props.fileRelativePath,
     label: 'Edit Post', // needs to be unique
     // starting values for the post object
-    initialValues: { title: props.title, headline: props.headline },
+    initialValues: { title: props.title, headline: props.headline, markdown: props.markdown },
     // field definition
     fields: [
       { name: 'title', label: 'Title', component: 'text' },
-      { name: 'headline', label: 'Headline', component: 'text' },
+      { name: 'headline', label: 'Headline', component: 'textarea' },
+      {
+        name: 'markdown',
+        component: 'markdown',
+        label: 'Post Body',
+        description: 'Edit the body of the post here',
+      },
     ], // save & commit the file when the "save" button is pressed
     onSubmit(data) {
       return cms.api.git
         .writeToDisk({
           fileRelativePath: props.fileRelativePath,
-          content: JSON.stringify({ title: data.title, headline: data.headline }),
+          content: JSON.stringify({
+            title: data.title,
+            headline: data.headline,
+            markdown: data.markdown,
+          }),
         })
         .then(() => {
           return cms.api.git.commit({
@@ -43,6 +53,7 @@ export default function ExamplePage(props) {
       content: JSON.stringify({
         title: formState.values.title,
         headline: formState.values.headline,
+        markdown: formState.values.markdown,
       }),
     })
   }, [])
@@ -58,7 +69,9 @@ export default function ExamplePage(props) {
         sections={[
           {
             id: 'overview',
-            children: <Overview title={post.title} introduction={post.headline} text="x" />,
+            children: (
+              <Overview title={post.title} introduction={post.headline} text={post.markdown} />
+            ),
           },
         ]}
       />
@@ -75,6 +88,7 @@ ExamplePage.getInitialProps = function getInitialProps(ctx) {
     fileRelativePath: `../../packages/web/posts/example.json`,
     title: content.title,
     headline: content.headline,
+    markdown: content.markdown,
   }
 }
 
