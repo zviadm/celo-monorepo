@@ -1,3 +1,4 @@
+import { GitClient } from '@tinacms/git-client'
 import App from 'next/app'
 import getConfig from 'next/config'
 import * as React from 'react'
@@ -9,11 +10,20 @@ import Header from 'src/header/Header.3'
 import { ScreenSizeProvider } from 'src/layout/ScreenSize'
 import Footer from 'src/shared/Footer.3'
 import { HEADER_HEIGHT } from 'src/shared/Styles'
+import { Tina, TinaCMS } from 'tinacms'
 import Sentry, { initSentry } from '../fullstack/sentry'
 import { appWithTranslation } from '../src/i18n'
 
 config({ ssrReveal: true })
 class MyApp extends App {
+  cms: TinaCMS
+
+  constructor(p, s) {
+    super(p, s)
+    this.cms = new TinaCMS()
+    const client = new GitClient('http://localhost:3000/___tina')
+    this.cms.registerApi('git', client)
+  }
   componentDidMount() {
     if (canTrack()) {
       initSentry()
@@ -49,15 +59,17 @@ class MyApp extends App {
   render() {
     const { Component, pageProps } = this.props
     return (
-      <ScreenSizeProvider>
-        {this.skipHeader() || <Header />}
-        <Component {...pageProps} />
-        {this.skipHeader() || (
-          <View>
-            <Footer />
-          </View>
-        )}
-      </ScreenSizeProvider>
+      <Tina cms={this.cms} position="overlay">
+        <ScreenSizeProvider>
+          {this.skipHeader() || <Header />}
+          <Component {...pageProps} />
+          {this.skipHeader() || (
+            <View>
+              <Footer />
+            </View>
+          )}
+        </ScreenSizeProvider>
+      </Tina>
     )
   }
 }

@@ -21,6 +21,9 @@ import mailer from './mailer'
 import { getFormattedMediumArticles } from './mediumAPI'
 const port = parseInt(process.env.PORT, 10) || 3000
 
+import { router as tinaRouter } from '@tinacms/api-git'
+import cors from 'cors'
+
 const dev = process.env.NEXT_DEV === 'true'
 const app = next({ dev })
 const handle = app.getRequestHandler()
@@ -43,6 +46,9 @@ function wwwRedirect(req, res, nextAction) {
   server.enable('trust proxy')
   server.use(compression())
   server.use(slashes(false))
+
+  server.use(cors())
+  server.use('/___tina', tinaRouter())
 
   if (!dev) {
     server.use(expressEnforcesSsl())
