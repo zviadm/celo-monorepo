@@ -1,6 +1,6 @@
 {
   "title": "A Demo of Tina CMS!",
-  "headline": "Ok partner lets rock this house, today",
+  "headline": "Ok partner lets rock this house, today\n\nhey",
   "markdown":
-    "If we had Markdown rendering this would be _italic_\n\n* hey\n* lets have\n* events\n  1. yes its a list"
+    "If we had Markdown rendering this would be _italic_\n\n* hey\n* lets have\n* events\n  1. yes its a list\n  2. "
 }
