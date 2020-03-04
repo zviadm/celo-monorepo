@@ -129,6 +129,8 @@ export class WalletHome extends React.Component<Props> {
 
   onRefresh = async () => {
     this.props.refreshAllBalances()
+    // Reset standby transactions when using forno mode
+    this.props.resetStandbyTransactions()
   }
 
   componentDidMount() {
