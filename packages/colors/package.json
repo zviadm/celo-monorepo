@@ -1,0 +1,20 @@
+{
+  "name": "@celo/colors",
+  "version": "1.0.0",
+  "description": "Colors used by Celo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/celo-org/celo-monorepo"
+  },
+  "keywords": [
+    "celo",
+    "colors",
+    "colour"
+  ],
+  "author": "aaronmgdr",
+  "license": "MIT"
+}
