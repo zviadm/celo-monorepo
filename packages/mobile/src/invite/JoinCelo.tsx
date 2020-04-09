@@ -138,8 +138,9 @@ export class JoinCelo extends React.Component<Props, State> {
       return
     }
 
+    // Only show data saver in Android due to iOS restart issue
+
     if (Platform.OS === 'android') {
-      // Only show data saver in Android due to iOS restart issue
       this.props.setPromptForno(true) // Allow forno prompt after Welcome screen
     }
     this.props.setPhoneNumber(e164Number, countryCode)

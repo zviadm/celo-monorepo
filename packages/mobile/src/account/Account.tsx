@@ -273,7 +273,6 @@ export class Account extends React.Component<Props, State> {
             )}
             {showSecurity && <SettingsItem title={t('security')} onPress={this.goToSecurity} />}
             <SettingsItem title={t('analytics')} onPress={this.goToAnalytics} />
-
             {showDataSaver && <SettingsItem title={t('dataSaver')} onPress={this.goToDataSaver} />}
             <SettingsItem title={t('languageSettings')} onPress={this.goToLanguageSetting} />
             <SettingsItem
