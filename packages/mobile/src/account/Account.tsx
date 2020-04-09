@@ -5,7 +5,15 @@ import { isE164Number } from '@celo/utils/src/phoneNumbers'
 import * as Sentry from '@sentry/react-native'
 import * as React from 'react'
 import { WithTranslation } from 'react-i18next'
-import { Clipboard, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
+import {
+  Clipboard,
+  Platform,
+  ScrollView,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+} from 'react-native'
 import DeviceInfo from 'react-native-device-info'
 import SafeAreaView from 'react-native-safe-area-view'
 import { connect } from 'react-redux'
@@ -226,6 +234,7 @@ export class Account extends React.Component<Props, State> {
   render() {
     const { t, account, numberVerified, pincodeType } = this.props
     const showSecurity = pincodeType === PincodeType.CustomPin
+    const showDataSaver = Platform.OS === 'android' // Only show data saver in Android due to iOS restart issue
 
     return (
       <ScrollView style={style.scrollView}>
@@ -264,7 +273,8 @@ export class Account extends React.Component<Props, State> {
             )}
             {showSecurity && <SettingsItem title={t('security')} onPress={this.goToSecurity} />}
             <SettingsItem title={t('analytics')} onPress={this.goToAnalytics} />
-            <SettingsItem title={t('dataSaver')} onPress={this.goToDataSaver} />
+
+            {showDataSaver && <SettingsItem title={t('dataSaver')} onPress={this.goToDataSaver} />}
             <SettingsItem title={t('languageSettings')} onPress={this.goToLanguageSetting} />
             <SettingsItem
               title={t('localCurrencySetting')}

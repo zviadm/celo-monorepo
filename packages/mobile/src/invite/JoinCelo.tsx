@@ -6,7 +6,7 @@ import colors from '@celo/react-components/styles/colors'
 import { fontStyles } from '@celo/react-components/styles/fonts'
 import * as React from 'react'
 import { WithTranslation } from 'react-i18next'
-import { ScrollView, StyleSheet, Text } from 'react-native'
+import { Platform, ScrollView, StyleSheet, Text } from 'react-native'
 import SafeAreaView from 'react-native-safe-area-view'
 import { connect } from 'react-redux'
 import { setName, setPhoneNumber, setPromptForno } from 'src/account/actions'
@@ -138,7 +138,10 @@ export class JoinCelo extends React.Component<Props, State> {
       return
     }
 
-    this.props.setPromptForno(true) // Allow forno prompt after Welcome screen
+    if (Platform.OS === 'android') {
+      // Only show data saver in Android due to iOS restart issue
+      this.props.setPromptForno(true) // Allow forno prompt after Welcome screen
+    }
     this.props.setPhoneNumber(e164Number, countryCode)
     this.props.setName(name)
     this.goToNextScreen()
