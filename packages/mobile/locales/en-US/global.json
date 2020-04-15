@@ -41,6 +41,7 @@
   "invalidPhone": "Invalid phone number",
   "cantSelectInvalidPhone": "Cannot select contact: invalid phone number",
   "needMoreFundsToSend": "Need more funds to send payment",
+  "exceedDailyLimit": "The daily limit is 500 CUSD ({{limitLocal}}) {{remainingCUSD}} CUSD ({{remainingNative}}) remaining",
   "invalidAmount": "Invalid amount",
   "invalidCode": "Invalid Verification Code",
   "confirm": "Confirm",

@@ -203,6 +203,10 @@ export class SendAmount extends React.Component<Props, State> {
     }
   }
 
+  willExceedDailyLimit = () => {
+    return true // if the amount + amount sent today is greater than the daily limit, keeping in mind to convert
+  }
+
   getRecipient = (): Recipient => {
     return getRecipient(this.props.navigation)
   }
@@ -247,6 +251,11 @@ export class SendAmount extends React.Component<Props, State> {
     const { isDollarBalanceSufficient } = this.isAmountValid()
     if (!isDollarBalanceSufficient) {
       this.props.showError(ErrorMessages.NSF_TO_SEND)
+      return
+    }
+
+    if (this.willExceedDailyLimit()) {
+      this.props.showError(ErrorMessages.EXCEED_DAILY_LIMIT)
       return
     }
 
