@@ -1,9 +1,10 @@
+// import { isLocaleRTL } from '../server/i18nSetup'
+import { StyleSheetServer } from 'aphrodite'
 import Document, { DocumentContext, Head, Main, NextScript } from 'next/document'
 import * as React from 'react'
-import { AppRegistry, I18nManager } from 'react-native-web'
+// import { AppRegistry, I18nManager } from 'react-native-web'
 import { setDimensionsForScreen } from 'src/layout/ScreenSize'
 import { getSentry } from 'src/utils/sentry'
-import { isLocaleRTL } from '../server/i18nSetup'
 
 interface NextReq {
   locale: string
@@ -23,25 +24,17 @@ export default class MyDocument extends Document<Props> {
     const userAgent = context.req.headers['user-agent']
     setDimensionsForScreen(userAgent)
 
-    AppRegistry.registerComponent('Main', () => Main)
-
-    // Use RTL layout for appropriate locales. Remember to do this client-side too.
-    I18nManager.setPreferredLanguageRTL(isLocaleRTL(locale))
-
-    // Get the html and styles needed to render this page.
-    const { getStyleElement } = AppRegistry.getApplication('Main')
-    const page = context.renderPage()
-    const styles = React.Children.toArray([
-      // <style key={'normalize-style'} dangerouslySetInnerHTML={{ __html: normalizeNextElements }} />,
-      getStyleElement(),
-    ])
-
     if (context.err) {
       const Sentry = await getSentry()
       Sentry.captureException(context.err)
     }
 
-    return { ...page, locale, styles: React.Children.toArray(styles), pathname: context.pathname }
+    // @ts-ignore
+    const { html, css } = StyleSheetServer.renderStatic(() => context.renderPage())
+    const ids = css.renderedClassNames
+    return { html, css, ids, pathname: context.pathname, locale }
+
+    // return { ...page, locale, styles: React.Children.toArray(styles), pathname: context.pathname }
   }
 
   render() {
@@ -51,6 +44,7 @@ export default class MyDocument extends Document<Props> {
         <Head>
           <meta name="viewport" content="width=device-width, initial-scale=1.0" />
           <link rel="stylesheet" href={'/normalize.css'} />
+          <style dangerouslySetInnerHTML={{ __html: this.props.css.content }} data-aphrodite="" />
 
           <link
             rel="stylesheet"
