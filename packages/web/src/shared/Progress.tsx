@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router'
 import * as React from 'react'
-import { StyleSheet, View } from 'react-native'
+import { StyleSheet, View } from 'src/shared/core'
 import { colors } from 'src/styles'
 import { EffectiveTypes, getEffectiveConnection } from 'src/utils/utils'
 
@@ -108,11 +108,11 @@ const styles = StyleSheet.create({
     animationKeyframes: [
       {
         '0%': {
-          transform: [{ scaleX: 0 }],
+          transform: 'scaleY(0)',
         },
 
         '100%': {
-          transform: [{ scaleX: 1 }],
+          transform: 'scaleY(1)',
         },
       },
     ],

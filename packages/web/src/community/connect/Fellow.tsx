@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { Image, ImageSourcePropType, StyleSheet, Text, View } from 'react-native'
+import { Image, ImageSourcePropType, StyleSheet, Text, View } from 'src/shared/core'
 import { H4 } from 'src/fonts/Fonts'
 import { Cell, GridRow, Spans } from 'src/layout/GridRow'
 import AspectRatio from 'src/shared/AspectRatio'

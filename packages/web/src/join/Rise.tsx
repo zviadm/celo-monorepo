@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { Dimensions, StyleSheet, View } from 'react-native'
+import { Dimensions, StyleSheet, View } from 'src/shared/core'
 import OvalCoin from 'src/shared/OvalCoin'
 import { colors } from 'src/styles'
 import { randomIntegerInRange } from 'src/utils/utils'

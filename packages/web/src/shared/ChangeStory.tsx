@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { Image, StyleSheet, Text, View } from 'react-native'
+import { Image, StyleSheet, Text, View } from 'src/shared/core'
 import { useScreenSize } from 'src/layout/ScreenSize'
 import globe from 'src/shared/world-spin.gif'
 import { colors, fonts, standardStyles, textStyles } from 'src/styles'

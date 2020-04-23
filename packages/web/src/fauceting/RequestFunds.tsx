@@ -1,7 +1,7 @@
 import dynamic from 'next/dynamic'
 import * as React from 'react'
 import ReCAPTCHA from 'react-google-recaptcha'
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, View } from 'src/shared/core'
 import { MobileOS, RequestRecord, RequestType } from 'src/fauceting/FaucetInterfaces'
 import { ButtonWithFeedback, ContextualInfo, HashingStatus } from 'src/fauceting/MicroComponents'
 import {
@@ -147,8 +147,6 @@ class RequestFunds extends React.PureComponent<Props & I18nProps, State> {
             name="beneficiary"
             style={[standardStyles.input, isInvalid && styles.error]}
             placeholder={this.props.t('testnetAddress')}
-            // TODO: is it normal that setBeneficiary is using React.SyntheticEvent<HTMLInputElement>
-            // and not NativeSyntheticEvent<TextInputChangeEventData> ?
             // @ts-ignore
             onChange={this.setAddress}
             value={this.state.beneficiary}

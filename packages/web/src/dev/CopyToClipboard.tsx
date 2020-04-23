@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, View } from 'src/shared/core'
 import CopyIcon from 'src/icons/CopyIcon'
 import Hoverable from 'src/shared/Hoverable'
 import { colors } from 'src/styles'

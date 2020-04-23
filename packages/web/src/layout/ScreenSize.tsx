@@ -1,7 +1,7 @@
 import throttle from 'lodash.throttle'
 import MobileDetect from 'mobile-detect'
 import * as React from 'react'
-import { Dimensions } from 'react-native'
+import { Dimensions } from 'src/shared/core'
 import { DESKTOP_BREAKPOINT, TABLET_BREAKPOINT } from 'src/shared/Styles'
 
 export enum ScreenSizes {

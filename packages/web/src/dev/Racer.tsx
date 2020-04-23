@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, View } from 'src/shared/core'
 
 import OvalCoin from 'src/shared/OvalCoin'
 import { colors, fonts, standardStyles } from 'src/styles'
@@ -57,7 +57,7 @@ const styles = StyleSheet.create({
     minWidth: COIN_OFFSET,
   },
   onLine: {
-    transform: [{ translateX: -COIN_OFFSET }],
+    transform: `translateX(${-COIN_OFFSET})`,
   },
   lineGroup: {
     marginTop: 5,

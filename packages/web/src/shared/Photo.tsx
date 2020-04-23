@@ -1,6 +1,6 @@
 import * as React from 'react'
 import LazyLoadFadin from 'react-lazyload-fadein'
-import { Image, ImageSourcePropType, StyleSheet, View } from 'react-native'
+import { Image, ImageSourcePropType, StyleSheet, View } from 'src/shared/core'
 import AspectRatio from 'src/shared/AspectRatio'
 import { standardStyles } from 'src/styles'
 

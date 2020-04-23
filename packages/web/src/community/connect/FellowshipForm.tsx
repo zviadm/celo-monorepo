@@ -1,6 +1,6 @@
 import { FellowAppShape } from 'fullstack/Fellowship'
 import * as React from 'react'
-import { StyleSheet } from 'react-native'
+import { StyleSheet } from 'src/shared/core'
 import { ErrorDisplay } from 'src/forms/ErrorDisplay'
 import FormContainer, { emailIsValid, hasField } from 'src/forms/Form'
 import { Form } from 'src/forms/FormComponents'

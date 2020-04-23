@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { StyleSheet, View } from 'react-native'
+import { StyleSheet, View } from 'src/shared/core'
 import Slide from 'react-reveal/Slide'
 import analytics from 'src/analytics/analytics'
 import { H2, H4 } from 'src/fonts/Fonts'
@@ -136,15 +136,13 @@ const rainBowStyles = StyleSheet.create({
     width: '70vw',
     zIndex: -10,
     backgroundColor: colors.primary,
-    // @ts-ignore
-    transform: [{ translateX: `calc(-70vw + 10px)` }, { translateY: -sizeOfSlidingOval * 0.7 }],
+    transform: `translateX(calc(-70vw + 10px)) translateY(${-sizeOfSlidingOval * 0.7}`,
   },
   centerItems: {
     alignItems: 'center',
   },
   slideingCoin: {
     opacity: 0.9,
-    // @ts-ignore // keeps it so that the mix-blend-mode svg blends after animation, otherwise it disapears on Chrome for Android on Pixel 3
     willChange: 'opacity',
     animationDuration: '2s',
     animationTimingFunction: 'cubic-bezier(.53,.01,.53,.98)',

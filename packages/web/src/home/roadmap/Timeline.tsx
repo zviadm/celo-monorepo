@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { Image, StyleSheet, Text, View } from 'react-native'
+import { Image, StyleSheet, Text, View } from 'src/shared/core'
 import { H1, H3 } from 'src/fonts/Fonts'
 import GoldStone from 'src/home/roadmap/GoldStone'
 import milestones, { Status } from 'src/home/roadmap/milestones'

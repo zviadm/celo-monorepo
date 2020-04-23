@@ -1,4 +1,4 @@
-import { StyleSheet } from 'react-native'
+import { StyleSheet } from 'src/shared/core'
 
 // Deprecated
 export const Colors = {
@@ -30,9 +30,9 @@ export const TextStyles = StyleSheet.create({
     borderBottomColor: '#eee',
   },
   th: {
-    fontWeight: '600',
+    fontWeight: 600,
     flex: 1,
-    alignItems: 'center',
+    alignItems: 'center' as 'center',
     justifyContent: 'center',
     padding: 4,
     backgroundColor: '#eee',

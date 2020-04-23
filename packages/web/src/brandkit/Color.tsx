@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { ImageBackground, ImageRequireSource, StyleSheet, Text, View } from 'react-native'
+import { ImageBackground, StyleSheet, Text, View } from 'react-native'
 import Palette from 'src/brandkit/color/Palette'
 import { brandStyles } from 'src/brandkit/common/constants'
 import {
@@ -115,7 +115,7 @@ interface LoremProps {
   color: colors
   withGap?: boolean
   hasBorder?: boolean
-  image?: ImageRequireSource
+  image?: string
 }
 
 function Lorem({ backgroundColor, color, withGap, hasBorder, image }: LoremProps) {

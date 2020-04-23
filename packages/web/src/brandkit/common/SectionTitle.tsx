@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { StyleSheet, View, ViewStyle } from 'react-native'
+import { StyleSheet, View, ViewStyle } from 'src/shared/core'
 import { H2 } from 'src/fonts/Fonts'
 import { standardStyles } from 'src/styles'
 

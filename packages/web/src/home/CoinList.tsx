@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { Image, StyleSheet, Text, View } from 'react-native'
+import { Image, StyleSheet, Text, View } from 'src/shared/core'
 import { H4 } from 'src/fonts/Fonts'
 import CoinListGlyph from 'src/home/logos/coinlist-glyph.png'
 import CoinListLogo from 'src/home/logos/coinlist-logo.png'

@@ -1,7 +1,7 @@
 import throttle from 'lodash.throttle'
 import { SingletonRouter, withRouter } from 'next/router'
 import * as React from 'react'
-import { findNodeHandle, StyleSheet, View } from 'react-native'
+import { StyleSheet, View } from 'src/shared/core'
 import MobileMenu from 'src/brandkit/common/MobileMenu'
 import Sidebar from 'src/brandkit/common/Sidebar'
 import Topbar from 'src/brandkit/common/TopBar'
@@ -130,10 +130,10 @@ class Page extends React.Component<Props & ScreenProps, State> {
 
   observer: IntersectionObserver
 
-  footer = React.createRef<View>()
+  footer = React.createRef<HTMLElement>()
 
   sectionRefs = this.props.sections.reduce((acc, section) => {
-    acc[section.id] = React.createRef<View>()
+    acc[section.id] = React.createRef<HTMLElement>()
     return acc
   }, {})
 
@@ -208,9 +208,8 @@ class Page extends React.Component<Props & ScreenProps, State> {
     this.observeRef(this.footer)
   }
 
-  observeRef = (ref: React.RefObject<View>) => {
-    // findNodeHandle is typed to return a number but returns an Element
-    const element = (findNodeHandle(ref.current) as unknown) as Element
+  observeRef = (ref: React.RefObject<HTMLElement>) => {
+    const element = ref.current
 
     this.observer.observe(element)
   }
@@ -325,7 +324,7 @@ const styles = StyleSheet.create({
   },
   childrenAreaDesktop: {
     // Design calls for *baseline* of text Title to match that of intro on side nav
-    transform: [{ translateY: -25 }],
+    transform: 'translateY(-25px)',
   },
 })
 

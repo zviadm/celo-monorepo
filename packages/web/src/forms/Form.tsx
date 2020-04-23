@@ -1,5 +1,4 @@
 import * as React from 'react'
-import { NativeSyntheticEvent, TextInputChangeEventData } from 'react-native'
 import { ErrorKeys } from 'src/forms/ErrorDisplay'
 interface State {
   isComplete: boolean
@@ -19,7 +18,7 @@ interface NativeEvent {
 
 interface ChildArguments {
   onSubmit: (any?: any) => Promise<void>
-  onInput: (event: NativeSyntheticEvent<TextInputChangeEventData>) => void
+  onInput: (event: any) => void
   onCheck: (event: { nativeEvent: NativeEvent }) => void
   onSelect: (key: string) => (event) => void
   formState: State

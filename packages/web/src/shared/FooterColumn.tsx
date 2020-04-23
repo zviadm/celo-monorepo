@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { StyleSheet, Text, View, ViewStyle } from 'react-native'
+import { StyleSheet, Text, View, ViewStyle } from 'src/shared/core'
 import { useScreenSize } from 'src/layout/ScreenSize'
 import Button, { BTN } from 'src/shared/Button.3'
 import { fonts, standardStyles } from 'src/styles'

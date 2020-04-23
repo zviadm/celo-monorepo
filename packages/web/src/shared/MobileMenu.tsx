@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { StyleSheet, View } from 'react-native'
+import { StyleSheet, View } from 'src/shared/core'
 import { NameSpaces, useTranslation } from 'src/i18n'
 import RingsGlyph from 'src/logos/RingsGlyph'
 import Button, { BTN } from 'src/shared/Button.3'

@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { StyleSheet } from 'react-native'
+import { StyleSheet } from 'src/shared/core'
 import { G, Path } from 'src/shared/svg'
 import { colors } from 'src/styles'
 import Svg from 'svgs'

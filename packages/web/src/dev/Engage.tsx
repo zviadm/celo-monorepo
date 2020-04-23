@@ -1,12 +1,5 @@
 import * as React from 'react'
-import {
-  Image,
-  ImageRequireSource,
-  ImageSourcePropType,
-  StyleSheet,
-  Text,
-  View,
-} from 'react-native'
+import { Image, ImageSourcePropType, StyleSheet, Text, View } from 'src/shared/core'
 import Fade from 'react-reveal/Fade'
 import { H2, H3, H4 } from 'src/fonts/Fonts'
 import { NameSpaces, useTranslation } from 'src/i18n'
@@ -36,7 +29,7 @@ interface ContentProps {
   network: string
   caption: string
   primaryAction: { text: string; href: string }
-  image: ImageRequireSource
+  image: string
   screen: ScreenSizes
 }
 

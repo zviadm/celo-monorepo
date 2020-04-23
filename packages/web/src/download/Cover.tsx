@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { StyleSheet, View } from 'react-native'
+import { StyleSheet, View } from 'src/shared/core'
 import AppLogo from 'src/download/AppLogo'
 import PhoneIllo from 'src/download/PhoneIllo'
 import { RequestType } from 'src/fauceting/FaucetInterfaces'

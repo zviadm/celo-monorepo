@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { Image, StyleSheet, View } from 'react-native'
+import { Image, StyleSheet, View } from 'src/shared/core'
 import { GAP } from 'src/brandkit/common/constants'
 import { standardStyles } from 'src/styles'
 

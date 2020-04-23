@@ -1,7 +1,7 @@
 import { ColorTranslator } from 'colortranslator'
 import hexRgba from 'hex-rgba'
 import * as React from 'react'
-import { StyleSheet, Text, View, ViewStyle } from 'react-native'
+import { StyleSheet, Text, View, ViewStyle } from 'src/shared/core'
 import { brandStyles } from 'src/brandkit/common/constants'
 import CopyIcon from 'src/icons/CopyIcon'
 import Hoverable from 'src/shared/Hoverable'
@@ -146,7 +146,7 @@ const styles = StyleSheet.create({
     transformOrigin: 'left',
   },
   pigmentHover: {
-    transform: [{ scaleX: 1.01 }],
+    transform: 'scaleY(1.01)',
   },
   copyText: {
     paddingLeft: 5,
@@ -157,7 +157,7 @@ const styles = StyleSheet.create({
   },
   copyHover: {
     opacity: 1,
-    transform: [{ scaleX: 0.95 }, { scaleY: 0.95 }],
+    transform: `scale(0.95)`,
   },
   afterEffect: { position: 'absolute' },
 })

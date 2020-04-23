@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { StyleSheet, View } from 'react-native'
+import { StyleSheet, View } from 'src/shared/core'
 import { ErrorDisplay, ErrorKeys } from 'src/forms/ErrorDisplay'
 import Form, { emailIsValid } from 'src/forms/Form'
 import SubmitButton from 'src/forms/SubmitButton'

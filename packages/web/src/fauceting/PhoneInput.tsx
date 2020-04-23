@@ -2,14 +2,7 @@ import { Countries, PhoneNumberUtils } from '@celo/utils'
 import memoizeOne from 'memoize-one'
 import * as React from 'react'
 import Autosuggest from 'react-autosuggest'
-import {
-  NativeSyntheticEvent,
-  StyleSheet,
-  Text,
-  TextInputChangeEventData,
-  TouchableOpacity,
-  View,
-} from 'react-native'
+import { StyleSheet, Text, TouchableOpacity, View } from 'src/shared/core'
 import { TextInput } from 'src/forms/TextInput'
 import { I18nProps, NameSpaces, withNamespaces } from 'src/i18n'
 import { ScreenProps, withScreenSize } from 'src/layout/ScreenSize'
@@ -82,7 +75,7 @@ class PhoneInput extends React.PureComponent<Props & ScreenProps & I18nProps, St
     this.setState({ countryQuery })
   }
 
-  onNumberInput = (event: NativeSyntheticEvent<TextInputChangeEventData>) => {
+  onNumberInput = (event) => {
     // remove non phone number characters
     const phone = event.nativeEvent.text.replace(/[^\d\(\)-\s.+]/g, '')
 

@@ -1,7 +1,7 @@
 import Dynamic from 'next/dynamic'
 import * as React from 'react'
 import FadeIn from 'react-lazyload-fadein'
-import { Dimensions, Image, StyleSheet, Text, View } from 'react-native'
+import { Dimensions, Image, StyleSheet, Text, View } from 'src/shared/core'
 import Fade from 'react-reveal/Fade'
 import Responsive from 'src/shared/Responsive'
 import Spinner from 'src/shared/Spinner'

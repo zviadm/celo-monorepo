@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { Image, StyleSheet, Text, View } from 'react-native'
+import { Image, StyleSheet, Text, View } from 'src/shared/core'
 import { brandStyles } from 'src/brandkit/common/constants'
 import Page, { COMPOSITION_PATH } from 'src/brandkit/common/Page'
 import PageHeadline from 'src/brandkit/common/PageHeadline'

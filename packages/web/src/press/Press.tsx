@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { Image, ImageRequireSource, StyleSheet, View } from 'react-native'
+import { Image, StyleSheet, View } from 'src/shared/core'
 import { I18nProps, withNamespaces } from 'src/i18n'
 import { Cell, GridRow, Spans } from 'src/layout/GridRow'
 import Button, { BTN, SIZE } from 'src/shared/Button.3'
@@ -73,7 +73,7 @@ const styles = StyleSheet.create({
 })
 
 interface Logo {
-  source: ImageRequireSource
+  source: string
   size: { height?: number; width?: number }
   url: string
 }

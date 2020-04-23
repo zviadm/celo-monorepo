@@ -1,6 +1,6 @@
 import * as React from 'react'
 import LazyLoad from 'react-lazyload'
-import { Image, ImageSourcePropType, StyleSheet, Text, View } from 'react-native'
+import { Image, ImageSourcePropType, StyleSheet, Text, View } from 'src/shared/core'
 import Fade from 'react-reveal/Fade'
 import analytics from 'src/analytics/analytics'
 import { H2 } from 'src/fonts/Fonts'

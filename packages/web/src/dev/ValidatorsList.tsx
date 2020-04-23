@@ -1,7 +1,7 @@
 import { BigNumber } from 'bignumber.js'
 import { SingletonRouter as Router } from 'next/router'
 import * as React from 'react'
-import { Text as RNText, View } from 'react-native'
+import { Text as RNText, View } from 'src/shared/core'
 import ValidatorsListRow, { CeloGroup } from 'src/dev/ValidatorsListRow'
 import { styles } from 'src/dev/ValidatorsListStyles'
 import { I18nProps, withNamespaces } from 'src/i18n'
@@ -9,10 +9,8 @@ import Chevron, { Direction } from 'src/icons/chevron'
 import { colors } from 'src/styles'
 import { weiToDecimal } from 'src/utils/utils'
 
-class Text extends RNText {
-  render() {
-    return <RNText style={[styles.defaultText, this.props.style]}>{this.props.children}</RNText>
-  }
+function Text(props) {
+  return <RNText style={[styles.defaultText, props.style]}>{props.children}</RNText>
 }
 
 interface HeaderCellProps {

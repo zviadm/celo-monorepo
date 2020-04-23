@@ -1,7 +1,7 @@
 import * as React from 'react'
-import { StyleSheet, Text, TextStyle } from 'react-native'
 import MessageDisplay from 'src/forms/MessageDisplay'
 import Checkmark from 'src/icons/Checkmark'
+import { StyleSheet, Text, TextStyle } from 'src/shared/core'
 import { colors } from 'src/styles'
 
 interface Props {
@@ -24,7 +24,7 @@ export default React.memo(({ message, style, isShowing }: Props) => {
 const styles = StyleSheet.create({
   success: {
     color: colors.primary,
-    fontWeight: '500',
+    fontWeight: 500,
   },
   message: {
     marginStart: 10,

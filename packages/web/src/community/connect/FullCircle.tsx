@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { ViewStyle } from 'react-native'
+import { ViewStyle } from 'src/shared/core'
 import { StyleSheet } from 'react-native-web'
 import shuffleSeed from 'shuffle-seed'
 import VECTORS from 'src/community/connect/RingOfCoinVectors'

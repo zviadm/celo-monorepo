@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { View } from 'react-native'
+import { View } from 'src/shared/core'
 import Fade from 'react-reveal/Fade'
 import FellowshipForm from 'src/community/connect/FellowshipForm'
 import FellowViewer from 'src/community/connect/FellowViewer'

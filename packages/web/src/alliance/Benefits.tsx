@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { Image, ImageSourcePropType, StyleSheet, Text, View } from 'react-native'
+import { Image, ImageSourcePropType, StyleSheet, Text, View } from 'src/shared/core'
 import { H2 } from 'src/fonts/Fonts'
 import { NameSpaces, useTranslation } from 'src/i18n'
 import {

@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { ImageBackground, ImageSourcePropType, StyleSheet, Text } from 'react-native'
+import { ImageBackground, ImageSourcePropType, StyleSheet, Text } from 'src/shared/core'
 import { useScreenSize } from 'src/layout/ScreenSize'
 import { colors, fonts, standardStyles, textStyles } from 'src/styles'
 

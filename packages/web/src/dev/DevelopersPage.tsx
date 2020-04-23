@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { StyleSheet, View } from 'react-native'
+import { StyleSheet, View } from 'src/shared/core'
 import previewImage from 'src/dev/dev-og.png'
 import DeveloperPhoneCover from 'src/dev/DeveloperPhoneCover'
 import { Contribute, EngageAsDeveloper } from 'src/dev/Engage'

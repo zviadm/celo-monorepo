@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, View } from 'src/shared/core'
 import Chevron from 'src/icons/chevron'
 import { colors, fonts, textStyles } from 'src/styles'
 import { getSentry } from 'src/utils/sentry'
@@ -12,11 +12,12 @@ interface Props {
 }
 
 export class BlueBanner extends React.PureComponent<Props> {
-  ref = React.createRef<View>()
+  ref = React.createRef<HTMLElement>()
   componentDidUpdate = () => {
-    this.ref.current.measure((_x, _y, _w, height) => {
-      this.props.getRealHeight(height)
-    })
+    // TODO @aphrodite get real height
+    // this.ref.current.measure((_x, _y, _w, height) => {
+    //   this.props.getRealHeight(height)
+    // })
   }
   render() {
     return (

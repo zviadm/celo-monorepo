@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { Image, StyleSheet, Text, View } from 'react-native'
+import { Image, StyleSheet, Text, View } from 'src/shared/core'
 import { I18nProps, withNamespaces } from 'src/i18n'
 import Button, { BTN, SIZE } from 'src/shared/Button.3'
 import { fonts, standardStyles } from 'src/styles'

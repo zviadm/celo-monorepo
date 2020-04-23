@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { View } from 'react-native'
+import { View } from 'src/shared/core'
 import Fade from 'react-reveal/Fade'
 import ArticleData from 'src/community/connect/ArticleData'
 import CodeOfConduct from 'src/community/connect/CodeOfConduct'

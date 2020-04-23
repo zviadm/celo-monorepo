@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { Text, View } from 'react-native'
+import { Text, View } from 'src/shared/core'
 import { brandStyles } from 'src/brandkit/common/constants'
 import Page, { ROOT } from 'src/brandkit/common/Page'
 import SectionTitle from 'src/brandkit/common/SectionTitle'

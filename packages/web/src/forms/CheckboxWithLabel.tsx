@@ -1,7 +1,6 @@
 import * as React from 'react'
-import { createElement, StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, View } from 'src/shared/core'
 import { colors, fonts, standardStyles, textStyles } from 'src/styles'
-import { Label } from './FormComponents'
 
 interface CheckboxProps {
   checked: boolean
@@ -22,9 +21,9 @@ export function CheckboxWithLabel({
       <Checkbox checked={checked} onPress={onPress} name={name} />
 
       <Text style={[fonts.a, textStyles.medium, checkBoxStyles.labelArea]}>
-        <Label for={name} onPress={onPress} style={checkBoxStyles.label}>
+        <label htmlFor={name} onClick={onPress} style={checkBoxStyles.label}>
           {label}
-        </Label>
+        </label>
       </Text>
     </View>
   )
@@ -41,7 +40,7 @@ function Checkbox({ checked, onPress, name }: CheckboxProps) {
       >
         ✓
       </Text>
-      {createElement('input', {
+      {React.createElement('input', {
         type: 'checkbox',
         name,
         checked,
@@ -62,7 +61,7 @@ const checkBoxStyles = StyleSheet.create({
   checkMark: {
     color: colors.gray,
     position: 'absolute',
-    transform: [{ translateY: -2 }, { translateX: 1 }],
+    transform: `translateY(-2px) translateX: 1px`,
     transitionProperty: 'opacity',
     transitionDuration: '100ms',
   },

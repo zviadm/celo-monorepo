@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { Image, StyleSheet, Text, View } from 'react-native'
+import { Image, StyleSheet, Text, View } from 'src/shared/core'
 import Fade from 'react-reveal/Fade'
 import { brandStyles } from 'src/brandkit/common/constants'
 import DownloadButton from 'src/brandkit/common/DownloadButton'

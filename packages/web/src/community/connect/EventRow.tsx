@@ -1,6 +1,6 @@
 import { EventProps } from 'fullstack/EventProps'
 import * as React from 'react'
-import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
+import { StyleSheet, Text, TouchableOpacity, View } from 'src/shared/core'
 import { I18nProps, withNamespaces } from 'src/i18n'
 import Chevron from 'src/icons/chevron'
 import { ScreenProps, ScreenSizes, withScreenSize } from 'src/layout/ScreenSize'

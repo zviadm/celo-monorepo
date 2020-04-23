@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { StyleSheet, View } from 'react-native'
+import { StyleSheet, View } from 'src/shared/core'
 import OvalCoin from 'src/shared/OvalCoin'
 import { Line, Path } from 'src/shared/svg'
 import { colors, standardStyles } from 'src/styles'
@@ -73,11 +73,11 @@ const styles = StyleSheet.create({
       {
         '0%': {
           opacity: 0.5,
-          transform: [{ translateX: -LINE_DISTANCE }],
+          transform: `translateX(${-LINE_DISTANCE}px)`,
         },
         '100%': {
           opacity: 1,
-          transform: [{ translateX: -5 }],
+          transform: `translateX(-5px)`,
         },
       },
     ],
@@ -88,11 +88,11 @@ const styles = StyleSheet.create({
       {
         '0%': {
           opacity: 0.6,
-          transform: [{ scaleX: 0 }],
+          transform: 'scaleY(0)',
         },
         '100%': {
           opacity: 1,
-          transform: [{ scaleX: 1 }],
+          transform: 'scaleY(1)',
         },
       },
     ],

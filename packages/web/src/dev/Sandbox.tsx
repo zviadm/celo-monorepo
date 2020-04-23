@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, View } from 'src/shared/core'
 import Analytics from 'src/analytics/analytics'
 import CodeEditor from 'src/dev/CodeEditor'
 import { H2, H3 } from 'src/fonts/Fonts'

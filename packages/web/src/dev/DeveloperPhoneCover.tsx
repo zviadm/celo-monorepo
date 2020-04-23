@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { StyleSheet, View } from 'react-native'
+import { StyleSheet, View } from 'src/shared/core'
 import Fade from 'react-reveal/Fade'
 import CoverActions from 'src/dev/CoverActions'
 import Phone from 'src/dev/Phone'

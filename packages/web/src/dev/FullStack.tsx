@@ -1,7 +1,7 @@
 import throttle from 'lodash.throttle'
 import dynamic from 'next/dynamic'
 import * as React from 'react'
-import { findNodeHandle, StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, View } from 'src/shared/core'
 import { Props as LayerIlloProps } from 'src/dev/LayersIllo'
 import StackSection from 'src/dev/StackSection'
 import { H2, H3, H4, Li } from 'src/fonts/Fonts'
@@ -41,8 +41,8 @@ const GLASS_CEILING = 160
 class FullStack extends React.PureComponent<I18nProps & ScreenProps, State> {
   state = { selection: Levels.apps, mode: StickyMode.normal }
 
-  ref = React.createRef<View>()
-  illoRef = React.createRef<View>()
+  ref = React.createRef<HTMLElement>()
+  illoRef = React.createRef<HTMLElement>()
 
   handleScroll = throttle(() => {
     if (!(this.props.screen === ScreenSizes.DESKTOP)) {
@@ -50,7 +50,7 @@ class FullStack extends React.PureComponent<I18nProps & ScreenProps, State> {
       return
     }
 
-    const element: any = findNodeHandle(this.ref.current)
+    const element: any = this.ref.current
     if (!element) {
       return
     }
@@ -58,15 +58,15 @@ class FullStack extends React.PureComponent<I18nProps & ScreenProps, State> {
     const clientRect: DOMRect = element.getBoundingClientRect()
 
     if (clientRect.top < HEADER_HEIGHT - 100) {
-      this.illoRef.current.measure((_x, _y, _w, illoHeight) => {
-        this.autoSetHighlight(clientRect, illoHeight)
-
-        if (clientRect.bottom - illoHeight < 100) {
-          this.setState({ mode: StickyMode.attachToBottom })
-        } else {
-          this.setState({ mode: StickyMode.fixed })
-        }
-      })
+      // TODO @aphrodite measure the thing
+      // this.illoRef.current.measure((_x, _y, _w, illoHeight) => {
+      //   this.autoSetHighlight(clientRect, illoHeight)
+      //   if (clientRect.bottom - illoHeight < 100) {
+      //     this.setState({ mode: StickyMode.attachToBottom })
+      //   } else {
+      //     this.setState({ mode: StickyMode.fixed })
+      //   }
+      // })
     } else {
       this.setState({ mode: StickyMode.normal })
     }

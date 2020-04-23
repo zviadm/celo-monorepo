@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { Text } from 'react-native'
+import { Text } from 'src/shared/core'
 import { H3 } from 'src/fonts/Fonts'
 import { Cell, GridRow, Spans } from 'src/layout/GridRow'
 import { fonts, standardStyles } from 'src/styles'

@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { StyleSheet, View } from 'react-native'
+import { StyleSheet, View } from 'src/shared/core'
 import LottieBase from 'src/animate/LottieBase'
 import profiles from 'src/community/lottie/all.json'
 

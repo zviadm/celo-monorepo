@@ -1,6 +1,6 @@
 import hexRgba from 'hex-rgba'
 import * as React from 'react'
-import { StyleSheet, View, ViewStyle } from 'react-native'
+import { StyleSheet, View, ViewStyle } from 'src/shared/core'
 import { H1 } from 'src/fonts/Fonts'
 import Responsive from 'src/shared/Responsive'
 import { colors, textStyles } from 'src/styles'

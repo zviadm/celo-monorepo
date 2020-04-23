@@ -1,6 +1,6 @@
 import * as React from 'react'
 import LazyLoadFadin from 'react-lazyload-fadein'
-import { Image, ImageURISource, StyleSheet, Text, View } from 'react-native'
+import { Image, StyleSheet, Text, View } from 'src/shared/core'
 import { Contributor } from 'src/about/Contributor'
 import { I18nProps, withNamespaces } from 'src/i18n'
 import BookLayout from 'src/layout/BookLayout'
@@ -41,8 +41,8 @@ export class Team extends React.Component<Props & I18nProps & ScreenProps> {
                     team={person.team}
                     company={person.company}
                     purpose={person.purpose}
-                    preview={{ uri: person.preview }}
-                    source={{ uri: person.photo }}
+                    preview={person.preview}
+                    source={person.photo}
                   />
                 </React.Fragment>
               ))}
@@ -55,8 +55,8 @@ export class Team extends React.Component<Props & I18nProps & ScreenProps> {
 }
 
 interface PortraitProps {
-  source: ImageURISource
-  preview: ImageURISource
+  source: string
+  preview: string
   name: string
   purpose: string
   team?: string
@@ -77,7 +77,7 @@ const Portrait = React.memo(function _Portrait({
     <>
       <Responsive medium={styles.mediumPerson} large={styles.largePerson}>
         <View style={styles.person}>
-          <ContributorPlaceHolder uri={preview.uri} />
+          <ContributorPlaceHolder uri={preview} />
           <View style={styles.realImageContainer}>
             <LazyLoadFadin>
               {(onLoad) => (

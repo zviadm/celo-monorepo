@@ -1,6 +1,6 @@
 import * as React from 'react'
 import FadeIn from 'react-lazyload-fadein'
-import { Image, ImageSourcePropType, StyleSheet, Text, View, ViewStyle } from 'react-native'
+import { Image, ImageSourcePropType, StyleSheet, Text, View, ViewStyle } from 'src/shared/core'
 import { H3 } from 'src/fonts/Fonts'
 import Button, { BTN, SIZE } from 'src/shared/Button.3'
 import { fonts, standardStyles, textStyles } from 'src/styles'

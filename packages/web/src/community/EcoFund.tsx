@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { Image, StyleSheet, Text, View } from 'react-native'
+import { Image, StyleSheet, Text, View } from 'src/shared/core'
 import ah from 'src/community/ah-logo.png'
 import polychain from 'src/community/polychain-logo.png'
 import { H2 } from 'src/fonts/Fonts'

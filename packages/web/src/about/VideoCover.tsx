@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { createElement, Image, StyleSheet, View, ViewStyle } from 'react-native'
+import { Image, StyleSheet, View, ViewStyle } from 'src/shared/core'
 import { H1, H3 } from 'src/fonts/Fonts'
 import { I18nProps, NameSpaces, withNamespaces } from 'src/i18n'
 import { ScreenProps, ScreenSizes, withScreenSize } from 'src/layout/ScreenSize'
@@ -8,6 +8,7 @@ import { PlayCircle2 } from 'src/shared/PlayCircle'
 import VideoModal from 'src/shared/VideoModal'
 import { standardStyles, textStyles } from 'src/styles'
 import { hasGoodConnection } from 'src/utils/utils'
+import { css } from 'aphrodite'
 
 interface State {
   isHovering: boolean
@@ -24,7 +25,7 @@ interface VideoProps {
 }
 
 function Video(props: VideoProps) {
-  return createElement('video', props)
+  return <video className={css(props.style)} {...props} />
 }
 
 class VideoCover extends React.PureComponent<I18nProps & ScreenProps, State> {
@@ -138,7 +139,7 @@ const styles = StyleSheet.create({
     padding: 15,
   },
   hover: {
-    transform: [{ scale: 1.015 }],
+    transform: 'scale(1.015)',
   },
   background: {
     position: 'absolute',

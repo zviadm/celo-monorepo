@@ -1,6 +1,6 @@
 import * as React from 'react'
 import FadeIn from 'react-lazyload-fadein'
-import { Image, StyleSheet, View } from 'react-native'
+import { Image, StyleSheet, View } from 'src/shared/core'
 import Fade from 'react-reveal/Fade'
 import { H2 } from 'src/fonts/Fonts'
 import { I18nProps, withNamespaces } from 'src/i18n'

@@ -1,4 +1,4 @@
-import { StyleSheet } from 'react-native'
+import { StyleSheet } from 'src/shared/core'
 import { HEADER_HEIGHT } from 'src/shared/Styles'
 import { colors, typeFaces } from 'src/styles'
 
@@ -132,7 +132,7 @@ export const styles = StyleSheet.create({
   },
   tableCellTitleFirstRow: {
     textDecorationLine: 'underline',
-    fontWeight: '500',
+    fontWeight: 500,
     overflow: 'hidden',
     whiteSpace: 'nowrap',
     textOverflow: 'ellipsis',
@@ -180,13 +180,13 @@ export const styles = StyleSheet.create({
   },
   tableCellBarsValue: {
     paddingRight: 8,
-    fontWeight: '500',
+    fontWeight: 500,
     fontSize: 14,
   },
   tableCellBarsRows: {},
   tableCellBarsRowValues: {
     fontSize: 14,
-    fontWeight: '500',
+    fontWeight: 500,
     paddingBottom: 2,
     display: 'flex',
     color: colors.grayHeavy,
@@ -271,7 +271,7 @@ export const styles = StyleSheet.create({
 
   // Tooltip
   tooltip: {
-    fontWeight: '300',
+    fontWeight: 300,
     fontSize: 14,
     backgroundColor: '#585c60',
     paddingVertical: 4,
@@ -280,7 +280,7 @@ export const styles = StyleSheet.create({
     top: '100%',
     marginTop: 10,
     left: '50%',
-    transform: [{ translateX: '-50%' as any }],
+    transform: `translateX(-50%)`,
     textAlign: 'left',
     whiteSpace: 'nowrap',
     borderRadius: 3,
@@ -288,7 +288,7 @@ export const styles = StyleSheet.create({
   },
   tooltipRow: {
     lineHeight: 34,
-    display: 'flex' as any,
+    display: 'flex',
     alignItems: 'center',
   },
   tooltipText: {

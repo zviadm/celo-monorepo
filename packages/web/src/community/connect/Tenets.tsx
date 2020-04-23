@@ -1,6 +1,6 @@
 import Carousel from 'nuka-carousel'
 import * as React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, View } from 'src/shared/core'
 import Fade from 'react-reveal/Fade'
 import PagingDots from 'src/carousel/PagingDots'
 import { H2, H3, H4 } from 'src/fonts/Fonts'

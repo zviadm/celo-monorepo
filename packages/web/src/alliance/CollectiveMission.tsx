@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { View } from 'react-native'
+import { View } from 'src/shared/core'
 import AllianceLogo from 'src/alliance/AllianceLogo'
 import { H1, H4 } from 'src/fonts/Fonts'
 import { NameSpaces, useTranslation } from 'src/i18n'

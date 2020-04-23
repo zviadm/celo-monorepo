@@ -1,6 +1,6 @@
 import { EventProps } from 'fullstack/EventProps'
 import * as React from 'react'
-import { View } from 'react-native'
+import { View } from 'src/shared/core'
 import Events from 'src/community/connect/Events'
 import { getEvents } from 'src/community/connect/EventsData'
 import OpenGraph from 'src/header/OpenGraph'

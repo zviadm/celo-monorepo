@@ -1,5 +1,4 @@
 import * as React from 'react'
-import { Image, ImageSourcePropType, StyleSheet, Text, View, ViewStyle } from 'react-native'
 import {
   clabs,
   clabsMobile,
@@ -19,6 +18,7 @@ import cLabsLogo from 'src/logos/cLabs-logo.png'
 import laboratoriaLogo from 'src/logos/laboratoria-dark.png'
 import wfpLogo from 'src/logos/wfp-logo.png'
 import Button, { BTN, SIZE } from 'src/shared/Button.3'
+import { Image, ImageSourcePropType, StyleSheet, Text, View, ViewStyle } from 'src/shared/core'
 import Photo from 'src/shared/Photo'
 import { fonts, standardStyles, textStyles } from 'src/styles'
 

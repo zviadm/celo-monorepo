@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { View } from 'react-native'
+import { View } from 'src/shared/core'
 import Fade from 'react-reveal/Fade'
 import { H1 } from 'src/fonts/Fonts'
 import { Cell, GridRow, Spans } from 'src/layout/GridRow'

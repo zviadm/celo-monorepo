@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { StyleSheet, Text, TextInputProps, View } from 'react-native'
+import { StyleSheet, Text, TextInputProps, View } from 'src/shared/core'
 import { brandStyles } from 'src/brandkit/common/constants'
 import TextInput from 'src/forms/TextInput'
 import { NameSpaces, useTranslation } from 'src/i18n'

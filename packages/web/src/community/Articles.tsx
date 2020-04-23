@@ -1,7 +1,7 @@
 import { Articles as Props } from 'fullstack/ArticleProps'
 import * as React from 'react'
 import FadeIn from 'react-lazyload-fadein'
-import { StyleSheet, View } from 'react-native'
+import { StyleSheet, View } from 'src/shared/core'
 import { Cell, GridRow, Spans } from 'src/layout/GridRow'
 import Card from 'src/shared/Card'
 import Spinner from 'src/shared/Spinner'

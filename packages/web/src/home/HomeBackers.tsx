@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { Image, StyleSheet, View } from 'react-native'
+import { Image, StyleSheet, View } from 'src/shared/core'
 import { ah, coinbase, gc, lakestar, polychain, svAngel } from 'src/home/logos/logos'
 import { I18nProps, withNamespaces } from 'src/i18n'
 import { Cell, GridRow, Spans } from 'src/layout/GridRow'

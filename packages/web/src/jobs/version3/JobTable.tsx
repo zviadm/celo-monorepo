@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { SectionList, StyleSheet } from 'react-native'
+import { SectionList, StyleSheet } from 'src/shared/core'
 import Fade from 'react-reveal/Fade'
 import { I18nProps, withNamespaces } from 'src/i18n'
 import { groupByTeam, LeverJob, sortJobs } from 'src/jobs/lever'

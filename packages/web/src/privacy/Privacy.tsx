@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, View } from 'src/shared/core'
 import { H1, Li, TABLE, TD, TH, TR, Ul } from 'src/fonts/Fonts'
 import OpenGraph from 'src/header/OpenGraph'
 import { Cell, GridRow, Spans } from 'src/layout/GridRow'

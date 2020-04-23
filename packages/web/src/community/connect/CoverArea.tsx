@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, View } from 'src/shared/core'
 import CeloRoles from 'src/community/connect/CeloRoles'
 import { H1, H4 } from 'src/fonts/Fonts'
 import EmailForm from 'src/forms/EmailForm'

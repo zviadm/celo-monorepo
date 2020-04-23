@@ -1,6 +1,6 @@
 import * as React from 'react'
 import LazyLoad from 'react-lazyload'
-import { StyleSheet, View } from 'react-native'
+import { StyleSheet, View } from 'src/shared/core'
 import Fade from 'react-reveal/Fade'
 import { H3, H4 } from 'src/fonts/Fonts'
 import { I18nProps, withNamespaces } from 'src/i18n'
@@ -153,11 +153,11 @@ function keyFrames(from: Coord) {
     {
       from: {
         opacity: 0.3,
-        transform: [{ translateY: from.y }, { translateX: from.x }],
+        transform: `translateY(${from.y}) translateX(${from.x})`,
       },
       to: {
         opacity: 0.99,
-        transform: [{ translateY: 0 }, { translateX: 0 }],
+        transform: `translateY(0) translateX(0)`,
       },
     },
   ]

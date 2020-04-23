@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, View } from 'src/shared/core'
 import { I18nProps, withNamespaces } from 'src/i18n'
 import { LeverJob } from 'src/jobs/lever'
 import { ScreenProps, ScreenSizes } from 'src/layout/ScreenSize'

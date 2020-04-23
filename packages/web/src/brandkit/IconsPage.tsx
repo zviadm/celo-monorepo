@@ -1,7 +1,7 @@
 import fetch from 'cross-fetch'
 import { NextPage } from 'next'
 import * as React from 'react'
-import { StyleSheet, View } from 'react-native'
+import { StyleSheet, View } from 'src/shared/core'
 import CCLicense from 'src/brandkit/common/CCLicense'
 import { GAP } from 'src/brandkit/common/constants'
 import Page, { ICONS_PATH } from 'src/brandkit/common/Page'

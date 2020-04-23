@@ -1,6 +1,6 @@
 import { Articles as ArticleProps } from 'fullstack/ArticleProps'
 import * as React from 'react'
-import { View } from 'react-native'
+import { View } from 'src/shared/core'
 import Fade from 'react-reveal/Fade'
 import Articles from 'src/community/Articles'
 import { H2 } from 'src/fonts/Fonts'

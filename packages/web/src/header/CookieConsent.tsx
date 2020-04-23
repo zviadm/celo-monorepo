@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, View } from 'src/shared/core'
 import { I18nProps, withNamespaces } from 'src/i18n'
 import Link from 'src/shared/Link'
 import Responsive from 'src/shared/Responsive'
@@ -101,7 +101,7 @@ const styles = StyleSheet.create({
   },
   infoMessageTextPrefix: {
     textAlign: 'center',
-    fontWeight: '600',
+    fontWeight: 600,
   },
   buttonsContainer: {
     display: 'flex',

@@ -1,9 +1,8 @@
 import * as React from 'react'
-import { ImageStyle, StyleProp, TextStyle, ViewStyle } from 'react-native'
+import { ViewStyle } from 'src/shared/core'
 import { ScreenSizeContext, ScreenSizes } from 'src/layout/ScreenSize'
 
-type SharedStyle = StyleProp<ImageStyle | TextStyle | ViewStyle>
-
+type SharedStyle = ViewStyle
 interface Props {
   medium?: SharedStyle | SharedStyle[]
   large?: SharedStyle | SharedStyle[]

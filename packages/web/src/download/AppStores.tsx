@@ -1,6 +1,6 @@
 import * as React from 'react'
 import FadeIn from 'react-lazyload-fadein'
-import { Image, StyleSheet, TouchableOpacity, View } from 'react-native'
+import { Image, StyleSheet, TouchableOpacity, View } from 'src/shared/core'
 import Fade from 'react-reveal/Fade'
 import Title from 'src/dev/Title'
 import { H1, H4 } from 'src/fonts/Fonts'

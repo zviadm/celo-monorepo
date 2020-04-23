@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { StyleSheet, View } from 'react-native'
+import { StyleSheet, View } from 'src/shared/core'
 import { ScreenProps, ScreenSizes, withScreenSize } from 'src/layout/ScreenSize'
 import Button, { BTN } from 'src/shared/Button.3'
 import OvalCoin from 'src/shared/OvalCoin'
@@ -34,7 +34,7 @@ export default withScreenSize<Props>(
     distance,
   }: Props & ScreenProps) {
     const mainContaner = isFlowing
-      ? [styles.container, { transform: [{ translateY: distance }] }]
+      ? [styles.container, { transform: `translateY(${distance})` }]
       : styles.container
 
     const container = screen === ScreenSizes.MOBILE ? styles.mobileContainer : mainContaner
@@ -158,13 +158,13 @@ const styles = StyleSheet.create({
   },
   section: {
     transformOrigin: 'top',
-    transform: [{ scaleY: 0 }],
+    transform: 'scaleY(0)',
     marginLeft: 20,
     transitionProperty: 'transform,',
     transitionDuration: '500ms',
   },
   activeSection: {
-    transform: [{ scaleY: 1 }],
+    transform: 'scaleY(1px)',
   },
   inactiveText: { fontWeight: 'normal' },
 })

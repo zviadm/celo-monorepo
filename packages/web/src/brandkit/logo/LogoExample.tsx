@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, View } from 'src/shared/core'
 import { brandStyles, GAP } from 'src/brandkit/common/constants'
 import DownloadButton from 'src/brandkit/common/DownloadButton'
 import { AssetTypes } from 'src/brandkit/tracking'
@@ -67,6 +67,6 @@ const styles = StyleSheet.create({
     marginVertical: 15,
   },
   button: {
-    transform: [{ translateX: -30 }],
+    transform: 'translateX(-30px)',
   },
 })

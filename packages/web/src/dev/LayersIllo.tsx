@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { StyleSheet } from 'react-native'
+import { StyleSheet } from 'src/shared/core'
 import { Path } from 'src/shared/svg'
 import { colors } from 'src/styles'
 import Svg from 'svgs'
@@ -41,14 +41,14 @@ export default React.memo<Props>(function LayersIllo({ activeLayer, onSelectLaye
 const styles = StyleSheet.create({
   active: {
     opacity: 1,
-    transform: [{ scale: 1 }],
+    transform: 'scale(1)',
     transitionProperty: 'opacity transform',
     transitionDuration: '1s',
   },
   inactive: {
     transitionProperty: 'opacity transform',
     transitionDuration: '1s',
-    transform: [{ scale: 0.95 }, { translateX: 10 }],
+    transform: 'scale(0.95) translateX(10)',
     opacity: 0.5,
   },
   clicky: {

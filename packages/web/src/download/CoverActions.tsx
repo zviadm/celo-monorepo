@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { StyleSheet } from 'react-native'
+import { StyleSheet } from 'src/shared/core'
 import CoverAction from 'src/dev/CoverAction'
 import { I18nProps, NameSpaces, withNamespaces } from 'src/i18n'
 import { Cell, GridRow, Spans } from 'src/layout/GridRow'

@@ -1,7 +1,7 @@
 import App from 'next/app'
 import getConfig from 'next/config'
 import * as React from 'react'
-import { View } from 'react-native'
+import { View } from 'src/shared/core'
 import config from 'react-reveal/globals'
 import scrollIntoView from 'scroll-into-view'
 import analytics, { canTrack, initializeAnalytics } from 'src/analytics/analytics'

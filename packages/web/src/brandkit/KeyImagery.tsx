@@ -1,6 +1,6 @@
 import { NextPage } from 'next'
 import * as React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, View } from 'src/shared/core'
 import AssetProps from 'src/../fullstack/AssetProps'
 import CCLicense from 'src/brandkit/common/CCLicense'
 import { brandStyles } from 'src/brandkit/common/constants'

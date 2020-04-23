@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { StyleSheet, View, ViewStyle } from 'react-native'
+import { StyleSheet, View, ViewStyle } from 'src/shared/core'
 import Responsive from 'src/shared/Responsive'
 
 interface GridProps {
@@ -24,14 +24,9 @@ export enum Spans {
 
 export function GridRow(props: GridProps) {
   return (
-    <Responsive
-      large={[props.allStyle, styles.desktop, props.desktopStyle]}
-      medium={[props.allStyle, styles.tablet, props.desktopStyle, props.tabletStyle]}
-    >
-      <View nativeID={props.nativeID} style={[props.allStyle, styles.mobile, props.mobileStyle]}>
-        {props.children}
-      </View>
-    </Responsive>
+    <View nativeID={props.nativeID} style={[props.allStyle, styles.mobile, props.mobileStyle]}>
+      {props.children}
+    </View>
   )
 }
 

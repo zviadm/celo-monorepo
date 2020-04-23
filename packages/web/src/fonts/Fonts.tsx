@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { StyleSheet, Text, TextProps, View, ViewProps } from 'react-native'
+import { StyleSheet, Text, View } from 'src/shared/core'
 import Responsive from 'src/shared/Responsive'
 import { TextStyles } from 'src/shared/Styles'
 import { fonts, standardStyles } from 'src/styles'
@@ -103,17 +103,9 @@ export enum ListType {
   bullet,
 }
 
-interface ViewChildren {
-  children: React.ReactNode
-}
-interface TextChildren {
-  children: React.ReactNode | string
-  listStyle?: ListType
-}
-
-export function Ul(props: ViewProps & ViewChildren) {
+export function Ul(props) {
   return (
-    <View style={[styles.ul, StyleSheet.flatten(props.style)]} accessibilityRole={'list'}>
+    <View style={[styles.ul, props.style]} accessibilityRole={'list'}>
       {props.children}
     </View>
   )
@@ -130,13 +122,13 @@ function listType(listStyle: ListType) {
   }
 }
 
-export function Li(props: TextProps & TextChildren) {
-  const style = StyleSheet.flatten([
+export function Li(props) {
+  const style = [
     fonts.p,
     standardStyles.elementalMarginBottom,
     listType(props.listStyle),
     props.style,
-  ])
+  ]
   return (
     <Text style={style} accessibilityRole={'listitem'}>
       {props.children}

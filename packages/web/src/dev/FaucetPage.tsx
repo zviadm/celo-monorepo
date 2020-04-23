@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, View } from 'src/shared/core'
 import { RequestType } from 'src/fauceting/FaucetInterfaces'
 import RequestFunds from 'src/fauceting/RequestFunds'
 import { RequestState } from 'src/fauceting/utils'

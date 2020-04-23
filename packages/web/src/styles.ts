@@ -1,4 +1,4 @@
-import { StyleSheet, TextStyle } from 'react-native'
+import { StyleSheet, TextStyle } from 'src/shared/core'
 
 export enum colors {
   white = '#FFFFFF',
@@ -84,7 +84,7 @@ export const fontInfo: Record<string, TextStyle> = {
     fontFamily: typeFaces.futura,
     fontSize: 24,
     lineHeight: 28,
-    fontWeight: '400',
+    fontWeight: 400,
     ...fontDefaults,
   },
   h3Mobile: {
@@ -109,14 +109,14 @@ export const fontInfo: Record<string, TextStyle> = {
     fontFamily: typeFaces.futura,
     fontSize: 20,
     lineHeight: 24,
-    fontWeight: '500',
+    fontWeight: 500,
     ...fontDefaults,
   },
   h6: {
     fontFamily: typeFaces.futura,
     fontSize: 16,
     lineHeight: 18,
-    fontWeight: '500',
+    fontWeight: 500,
     ...fontDefaults,
   },
   navigation: {
@@ -126,7 +126,7 @@ export const fontInfo: Record<string, TextStyle> = {
     textAlign: 'center',
     ...fontDefaults,
     cursor: 'pointer',
-    fontWeight: '500',
+    fontWeight: 500,
   },
   p: {
     fontFamily: typeFaces.garamond,
@@ -179,9 +179,9 @@ export const textStyles = StyleSheet.create({
   left: {
     textAlign: 'left',
   },
-  lean: { fontWeight: '300' },
+  lean: { fontWeight: 300 },
   medium: {
-    fontWeight: '500',
+    fontWeight: 500,
   },
   heavy: {
     fontWeight: 'bold',
@@ -194,7 +194,7 @@ export const textStyles = StyleSheet.create({
   },
   error: {
     color: colors.error,
-    fontWeight: '500',
+    fontWeight: 500,
   },
   invert: {
     color: colors.white,
@@ -228,7 +228,7 @@ const mobileMargins = {
 export const standardStyles = StyleSheet.create({
   centered: {
     justifyContent: 'center',
-    alignItems: 'center',
+    alignItems: 'center' as 'center',
   },
   verticalLine: {
     height: 100,

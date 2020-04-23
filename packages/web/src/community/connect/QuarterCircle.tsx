@@ -1,6 +1,6 @@
 import * as React from 'react'
 import LazyLoad from 'react-lazyload'
-import { StyleSheet, ViewStyle } from 'react-native'
+import { StyleSheet, ViewStyle } from 'src/shared/core'
 import ringPaths from 'src/community/connect/QuarterRingOfVectors'
 import { ScreenProps, ScreenSizes, withScreenSize } from 'src/layout/ScreenSize'
 import { Path } from 'src/shared/svg'

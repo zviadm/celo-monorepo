@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { StyleSheet } from 'react-native'
+import { StyleSheet } from 'src/shared/core'
 import CoverAction from 'src/dev/CoverAction'
 import { I18nProps, withNamespaces } from 'src/i18n'
 import { Cell, GridRow, Spans } from 'src/layout/GridRow'
@@ -58,7 +58,7 @@ const styles = StyleSheet.create({
   main: {
     justifyContent: 'space-between',
     flexDirection: 'row',
-    transform: [{ translateX: 20 }],
+    transform: 'translateX(20px)',
   },
   mainMobile: { justifyContent: 'space-around' },
 })

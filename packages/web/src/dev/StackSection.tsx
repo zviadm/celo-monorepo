@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, View } from 'src/shared/core'
 import { Ul } from 'src/fonts/Fonts'
 import { useScreenSize } from 'src/layout/ScreenSize'
 import Button, { BTN, SIZE } from 'src/shared/Button.3'
@@ -117,7 +117,7 @@ const styles = StyleSheet.create({
   coin: {
     transitionProperty: 'opacity',
     transitionDuration: `${TRANS_DURATION}ms`,
-    transform: [{ translateX: -30 }],
+    transform: 'translateX(-30px)',
     position: 'absolute',
   },
   bright: { opacity: 1 },

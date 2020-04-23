@@ -29,7 +29,7 @@ export default class RiseDemo extends React.PureComponent {
     )
   }
 }
-import { StyleSheet, View } from 'react-native'
+import { StyleSheet, View } from 'src/shared/core'
 
 const styles = StyleSheet.create({
   container: {

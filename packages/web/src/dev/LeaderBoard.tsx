@@ -1,6 +1,6 @@
 import * as React from 'react'
 import LazyLoad from 'react-lazyload'
-import { LayoutChangeEvent, StyleSheet, Text, View } from 'react-native'
+import { LayoutChangeEvent, StyleSheet, Text, View } from 'src/shared/core'
 import Fade from 'react-reveal/Fade'
 import Racer from 'src/dev/Racer'
 import { H2, H3 } from 'src/fonts/Fonts'

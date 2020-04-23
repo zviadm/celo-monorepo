@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, View } from 'src/shared/core'
 import { ErrorDisplay, ErrorKeys, getErrorTransKey } from 'src/forms/ErrorDisplay'
 import { TextInput } from 'src/forms/TextInput'
 import { colors, fonts, standardStyles, textStyles } from 'src/styles'

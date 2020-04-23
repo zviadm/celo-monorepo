@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, View } from 'src/shared/core'
 import Fade from 'react-reveal/Fade'
 import { Status } from 'src/home/roadmap/milestones'
 import { useScreenSize } from 'src/layout/ScreenSize'
@@ -94,7 +94,7 @@ const styles = StyleSheet.create({
   thruline: {
     width: 2,
     backgroundColor: colors.gold,
-    transform: [{ translateY: 10 }],
+    transform: 'translateY(10px)',
   },
   noline: {
     width: 2,
@@ -108,16 +108,12 @@ const styles = StyleSheet.create({
   },
   futureCoin: {
     position: 'absolute',
-    transform: [
-      { translateX: -HORIZONTAL_SPACE - DISTANCE_COIN_TO_BE_CENTER_ONLINE + 1 },
-      { translateY: 1 },
-    ],
+    transform: `translateX(${-HORIZONTAL_SPACE -
+      DISTANCE_COIN_TO_BE_CENTER_ONLINE +
+      1}) translateY(1)`,
   },
   coin: {
     position: 'absolute',
-    transform: [
-      { translateX: -HORIZONTAL_SPACE - DISTANCE_COIN_TO_BE_CENTER_ONLINE },
-      { translateY: 1 },
-    ],
+    transform: `translateX(${-HORIZONTAL_SPACE - DISTANCE_COIN_TO_BE_CENTER_ONLINE}) translateY(1)`,
   },
 })

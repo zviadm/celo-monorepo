@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, View } from 'src/shared/core'
 import Fade from 'react-reveal/Fade'
 import { EXAMPLE_ADDRESS, RequestState } from 'src/fauceting/utils'
 import { I18nProps } from 'src/i18n'

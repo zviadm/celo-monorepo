@@ -1,6 +1,6 @@
 import { EventProps } from 'fullstack/EventProps'
 import * as React from 'react'
-import { SectionList, SectionListRenderItemInfo, StyleSheet, Text, View } from 'react-native'
+import { SectionList, SectionListRenderItemInfo, StyleSheet, Text, View } from 'src/shared/core'
 import Fade from 'react-reveal/Fade'
 import EventRow from 'src/community/connect/EventRow'
 import { I18nProps, withNamespaces } from 'src/i18n'

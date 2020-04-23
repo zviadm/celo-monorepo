@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { Image, StyleSheet, Text, View } from 'react-native'
+import { Image, StyleSheet, Text, View } from 'src/shared/core'
 import Palette from 'src/brandkit/color/Palette'
 import { brandStyles, GAP } from 'src/brandkit/common/constants'
 import { BACKGROUND_PALETTE } from 'src/brandkit/common/data'

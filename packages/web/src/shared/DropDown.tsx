@@ -1,6 +1,6 @@
 import throttle from 'lodash.throttle'
 import * as React from 'react'
-import { LayoutChangeEvent, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
+import { LayoutChangeEvent, StyleSheet, Text, TouchableOpacity, View } from 'src/shared/core'
 import Hoverable from 'src/shared/Hoverable'
 import Responsive from 'src/shared/Responsive'
 import Triangle, { Direction } from 'src/shared/Triangle'

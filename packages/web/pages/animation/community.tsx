@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { StyleSheet, View } from 'react-native'
+import { StyleSheet, View } from 'src/shared/core'
 import FullCircle from 'src/community/connect/FullCircle'
 import OpenGraph from 'src/header/OpenGraph'
 import LogoCombinedColor from 'src/logos/LogoDarkBg'

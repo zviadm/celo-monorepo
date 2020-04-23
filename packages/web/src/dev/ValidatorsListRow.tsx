@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { Text as RNText, View } from 'react-native'
+import { Text as RNText, View } from 'src/shared/core'
 import CopyToClipboard from 'src/dev/CopyToClipboard'
 import ProgressCutBar from 'src/dev/ProgressCutBar'
 import { styles } from 'src/dev/ValidatorsListStyles'
@@ -11,10 +11,8 @@ import { cutAddress, formatNumber } from 'src/utils/utils'
 
 const unknonValidatorName = 'Unnamed validator'
 
-class Text extends RNText {
-  render() {
-    return <RNText style={[styles.defaultText, this.props.style]}>{this.props.children}</RNText>
-  }
+function Text(props) {
+  return <RNText style={[styles.defaultText, props.style]}>{props.children}</RNText>
 }
 
 export interface CeloGroup {

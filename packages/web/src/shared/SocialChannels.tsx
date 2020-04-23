@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { Image, StyleSheet, Text, View } from 'react-native'
+import { Image, StyleSheet, Text, View } from 'src/shared/core'
 import Fade from 'react-reveal/Fade'
 import { NameSpaces, useTranslation } from 'src/i18n'
 import eventsImg from 'src/icons/coin-talk_light-bg.png'

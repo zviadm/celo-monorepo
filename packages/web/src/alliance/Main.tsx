@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, View } from 'src/shared/core'
 import Fade from 'react-reveal/Fade'
 import Affirmations from 'src/alliance/Affirmations'
 import Benefits from 'src/alliance/Benefits'
@@ -143,11 +143,7 @@ const styles = StyleSheet.create({
   },
   thematicTitleMobile: { fontSize: 32, lineHeight: 36 },
   sweepContainer: {
-    transform: [
-      {
-        translateY: -100,
-      } as any,
-    ],
+    transform: ' translateY(-100px)',
   },
   sweepContainerMobile: {
     height: '100vh',

@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { StyleSheet, View } from 'react-native'
+import { StyleSheet, View } from 'src/shared/core'
 import { createElement } from 'react-native-web'
 import HomeOracle from 'src/home/HomeOracle'
 import { ScreenProps, ScreenSizes, withScreenSize } from 'src/layout/ScreenSize'

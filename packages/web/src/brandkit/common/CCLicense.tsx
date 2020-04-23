@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { Text } from 'react-native'
+import { Text } from 'src/shared/core'
 import { brandStyles } from 'src/brandkit/common/constants'
 import { I18nProps, NameSpaces, Trans, withNamespaces } from 'src/i18n'
 import InlineAnchor from 'src/shared/InlineAnchor'

@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, View } from 'src/shared/core'
 import Rise from 'src/join/Rise'
 import Button, { BTN, SIZE } from 'src/shared/Button.3'
 import { colors, fonts, standardStyles, textStyles } from 'src/styles'

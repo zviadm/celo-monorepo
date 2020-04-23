@@ -1,6 +1,6 @@
 import * as React from 'react'
 import Lazy from 'react-lazyload'
-import { Image, StyleSheet, Text, View } from 'react-native'
+import { Image, StyleSheet, Text, View } from 'src/shared/core'
 import EmailForm from 'src/forms/EmailForm'
 import { NameSpaces, Trans, useTranslation } from 'src/i18n'
 import Discord from 'src/icons/Discord'

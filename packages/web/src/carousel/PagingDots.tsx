@@ -1,6 +1,6 @@
 import { CarouselSlideRenderControlProps } from 'nuka-carousel'
 import * as React from 'react'
-import { StyleSheet, TouchableOpacity, View } from 'react-native'
+import { StyleSheet, TouchableOpacity, View } from 'src/shared/core'
 import { colors } from 'src/styles'
 
 export default function PagingDots(props: CarouselSlideRenderControlProps) {

@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { createElement, StyleSheet, View, ViewStyle } from 'react-native'
+import { StyleSheet, View, ViewStyle } from 'src/shared/core'
 
 interface Props {
   onLayout?: () => void
@@ -14,10 +14,10 @@ export default class AspectRatio extends React.Component<Props> {
 
     return (
       <View onLayout={onLayout} style={[styles.root, style]}>
-        {createElement('div', {
+        {React.createElement('div', {
           style: [styles.ratio, { paddingBottom: `${percentage}%` }],
         })}
-        {createElement('div', {
+        {React.createElement('div', {
           children,
           style: styles.content,
         })}

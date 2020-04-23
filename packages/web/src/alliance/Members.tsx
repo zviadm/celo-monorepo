@@ -1,7 +1,7 @@
 import { TFunction } from 'next-i18next'
 import * as React from 'react'
 import LazyFade from 'react-lazyload-fadein'
-import { Image, StyleSheet, Text, View } from 'react-native'
+import { Image, StyleSheet, Text, View } from 'src/shared/core'
 import Ally from 'src/alliance/AllianceMember'
 import { Category as CategoryEnum } from 'src/alliance/CategoryEnum'
 import gatherAllies from 'src/alliance/gatherAllies'
