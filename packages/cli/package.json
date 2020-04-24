@@ -36,7 +36,9 @@
     "@ledgerhq/hw-transport-node-hid": "^5.11.0",
     "@oclif/command": "^1",
     "@oclif/config": "^1",
+    "@oclif/plugin-autocomplete": "^0.1.5",
     "@oclif/plugin-help": "^2",
+    "@oclif/plugin-warn-if-update-available": "^1.7.0",
     "bip32": "2.0.5",
     "bip39": "3.0.2",
     "bls12377js": "https://github.com/celo-org/bls12377js#400bcaeec9e7620b040bfad833268f5289699cac",
@@ -48,8 +50,8 @@
     "events": "^3.0.0",
     "firebase": "^7.2.2",
     "fs-extra": "^8.1.0",
-    "moment": "2.24.0",
     "humanize-duration": "^3.21.0",
+    "moment": "2.24.0",
     "path": "^0.12.7",
     "prompts": "^2.0.1",
     "randombytes": "^2.0.1",
@@ -62,9 +64,9 @@
     "@types/cli-table": "^0.3.0",
     "@types/debug": "^4.1.4",
     "@types/fs-extra": "^8.0.0",
+    "@types/humanize-duration": "^3.18.0",
     "@types/mocha": "^7.0.2",
     "@types/node": "^10",
-    "@types/humanize-duration": "^3.18.0",
     "globby": "^8",
     "prettier": "1.19.1",
     "typescript": "^3.7.3"
@@ -114,8 +116,14 @@
     },
     "bin": "celocli",
     "plugins": [
-      "@oclif/plugin-help"
+      "@oclif/plugin-help",
+      "@oclif/plugin-autocomplete",
+      "@oclif/plugin-warn-if-update-available"
     ],
+    "warn-if-update-available": {
+      "timeoutInDays": 1,
+      "message": "<%= config.name %> update available from <%= chalk.greenBright(config.version) %> to <%= chalk.greenBright(latest) %>."
+    },
     "repositoryPrefix": "https://github.com/celo-org/celo-monorepo/tree/master/packages/cli/<%- commandPath %>"
   }
 }
